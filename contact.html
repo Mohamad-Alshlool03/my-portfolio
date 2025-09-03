@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Mohamad Khaled Al-Shlool</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <style>
+    /* رسالة الخطأ بشكل notice */
+    .error {
+      display: none;
+      background-color: #fff3cd; /* أصفر فاتح */
+      color: #856404;           /* بني غامق */
+      border: 1px solid #ffeeba;
+      padding: 12px;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-weight: 500;
+    }
+    .error:focus {
+      outline: 2px solid #ff9800;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-envelope-open-text"></i> Contact Me</h1>
+      <h2>I’d Love to Hear From You!</h2>
+
+      <div class="contact-quick">
+        <a class="chip" href="https://wa.me/962790986908" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+        </a>
+        <a class="social-chip" href="mailto:mshlool684@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a class="social-chip" href="https://www.linkedin.com/in/mohamad-shlool-1855332b8/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="social-chip" href="https://github.com/Mohamad-Alshlool03" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <button id="themeToggle" class="btn btn-outline" style="margin-left:8px"><i class="fas fa-moon"></i> Theme</button>
+      </div>
+
+      <nav class="top-nav" style="margin-top:16px">
+        <a href="About.html"><i class="fas fa-user"></i> About</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="container">
+    <section class="card reveal">
+      <h3><i class="fas fa-paper-plane"></i> Contact Form</h3>
+      <p class="help">Fill the form. Your email app will open with a pre-filled message to review & send.</p>
+
+      <!-- رسالة التحذير -->
+      <div id="error" class="error" role="alert" aria-live="assertive" tabindex="-1">
+        Please fill the required fields: Full Name, Email, Phone, Subject, and Message.
+      </div>
+
+      <form id="contactForm" autocomplete="on" novalidate>
+        <!-- Honeypot (anti-spam) -->
+        <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">
+          <label>Leave this empty</label>
+          <input type="text" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name *" required aria-label="Full Name">
+          <input type="email" id="email" name="email" placeholder="Email *" required aria-label="Email">
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="phone" name="phone" placeholder="Phone *" required aria-label="Phone">
+          <select id="country" name="country" style="width:100%" aria-label="Country"></select>
+        </div>
+
+        <div class="form-row">
+          <select id="service" name="service" aria-label="Service">
+            <option value="">Select Service (optional)</option>
+            <option>Logo Design</option>
+            <option>Social Media Post</option>
+            <option>Poster / Flyer</option>
+            <option>Business Card</option>
+            <option>Marketing Copy</option>
+            <option>Blog Article</option>
+          </select>
+          <select id="prefContact" name="prefContact" aria-label="Preferred Contact">
+            <option value="">Preferred Contact (optional)</option>
+            <option>Email</option>
+            <option>WhatsApp</option>
+            <option>Phone Call</option>
+          </select>
+        </div>
+
+        <!-- Subject before message -->
+        <input type="text" id="subject" name="subject" placeholder="Subject *" required aria-label="Subject">
+
+        <textarea id="message" name="message" rows="6" placeholder="Your Message *" required aria-label="Your Message"></textarea>
+
+        <div class="actions">
+          <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+          <a class="btn btn-outline" href="About.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-links">
+      <a href="About.html">About</a> •
+      <a href="Portfolio.html">Portfolio</a> •
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/mohamad-shlool-1855332b8/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Mohamad-Alshlool03" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://wa.me/962790986908" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:mshlool684@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 Mohamad Khaled Al-Shlool. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    // Dark mode toggle with persistence + reveal animations
+    (function(){
+      const key='theme';
+      const saved=localStorage.getItem(key);
+      if(saved==='dark'){ document.documentElement.setAttribute('data-theme','dark'); }
+      document.getElementById('themeToggle').addEventListener('click',()=>{
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        localStorage.setItem(key, isDark ? 'light' : 'dark');
+      });
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if(e.isIntersecting) e.target.classList.add('in');
+        });
+      }, {threshold: .1});
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    })();
+
+    // Country select
+    const COUNTRIES = ["Jordan","Saudi Arabia","United Arab Emirates","Qatar","Kuwait","Oman","Egypt","Iraq","Syria","Lebanon","Palestine","Turkey","Morocco","Tunisia","Algeria","Libya","Yemen","Sudan","Somalia","United States","United Kingdom","Germany","France","Italy","Spain","Netherlands","Sweden","Norway","Denmark","Switzerland","Canada","Brazil","India","Pakistan","Indonesia","Malaysia","Bangladesh","Japan","South Korea","China","Australia","New Zealand","South Africa","Nigeria","Kenya","Ghana","Mexico","Argentina","Russia","Ukraine","Poland"];
+
+    $(function(){
+      const $country = $('#country');
+      $country.append('<option></option>');
+      COUNTRIES.forEach(c => $country.append(`<option value="${c}">${c}</option>`));
+      $country.select2({placeholder: "Country", allowClear: true});
+
+      $('#contactForm').on('submit', function(e){
+        e.preventDefault();
+
+        // Honeypot
+        if(this.company && this.company.value.trim() !== "") return;
+
+        const full = $('#fullname').val().trim(),
+              email = $('#email').val().trim(),
+              phone = $('#phone').val().trim(),
+              subject = $('#subject').val().trim(),
+              msg = $('#message').val().trim();
+
+        if(!full || !email || !phone || !subject || !msg){
+          $('#error').slideDown(function(){
+            this.focus(); // يعمل فوكس عليها
+            this.scrollIntoView({behavior:"smooth", block:"center"}); // ينزل لها
+          });
+          return;
+        } else {
+          $('#error').hide();
+        }
+
+        const country = $('#country').val() || '',
+              service = $('#service').val() || '',
+              pref = $('#prefContact').val() || '';
+
+        const lines = [
+          `Name: ${full}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          country ? `Country: ${country}` : null,
+          service ? `Service: ${service}` : null,
+          pref ? `Preferred Contact: ${pref}` : null,
+          '',
+          'Message:',
+          msg
+        ].filter(Boolean);
+
+        const body = encodeURIComponent(lines.join('\n'));
+        const mailto = `mailto:mshlool684@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        // فتح مسودة البريد
+        window.location.href = mailto;
+      });
+    });
+  </script>
+</body>
+</html>

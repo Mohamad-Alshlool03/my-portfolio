@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Mohamad Khaled Al-Shlool</title>
+  <meta name="description" content="Portfolio: logos, social media designs, posters, business cards, and content." />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page polish to match Contact -->
+  <style>
+    .hero{
+      position:relative;
+      background: linear-gradient(135deg, rgba(44,62,80,.9), rgba(26,188,156,.85)), url('personal.jpg') center/cover no-repeat;
+      backdrop-filter: blur(1px);
+    }
+    .hero .container{ position:relative; z-index:2; }
+    .hero h1, .hero h2{ text-shadow:0 1px 2px rgba(0,0,0,.25); }
+
+    .contact-quick{
+      margin-top:12px; display:inline-flex; gap:10px; flex-wrap:wrap; align-items:center;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); color:#fff;
+      padding:8px 12px; border-radius:999px; text-decoration:none;
+      transition:transform .15s ease, background .2s ease;
+    }
+    .chip:hover{ transform:translateY(-1px); background:rgba(255,255,255,.22); }
+    .chip i{ font-size:.95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-briefcase"></i> Portfolio</h1>
+      <h2>Selected Work</h2>
+
+      <!-- quick contacts (optional but keeps consistency) -->
+      <div class="contact-quick">
+        <a class="chip" href="https://wa.me/962790986908" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> <span>WhatsApp: +962790986908</span>
+        </a>
+        <a class="chip" href="mailto:mshlool684@gmail.com">
+          <i class="fas fa-envelope"></i> <span>Email: mshlool684@gmail.com</span>
+        </a>
+      </div>
+
+      <nav class="top-nav" style="margin-top:16px">
+        <a href="About.html"><i class="fas fa-user"></i> About</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="container">
+    <section class="card">
+      <h3><i class="fas fa-images"></i> Recent Projects</h3>
+
+      <div class="grid works">
+        <!-- Work 1 -->
+        <figure class="work-card">
+          <a href="article.jpg" target="_blank" rel="noopener">
+            <img src="article.jpg" alt="مقال عربي احترافي" loading="lazy">
+          </a>
+          <figcaption>
+            <h4>كتابة مقال احترافي</h4>
+            <p>تنسيق نظيف بعناوين فرعية ومسافات مريحة — جاهز للنشر الإلكتروني.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Work 2 -->
+        <figure class="work-card">
+          <a href="cyber-workshop.jpg" target="_blank" rel="noopener">
+            <img src="cyber-workshop.jpg" alt="بوستر ورشة الأمن السيبراني" loading="lazy">
+          </a>
+          <figcaption>
+            <h4>تصميم بوست سوشيال ميديا</h4>
+            <p>تصميم دعائي بعناصر بصرية جذّابة يبرز الفكرة ويشجع على التفاعل.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Work 3 -->
+        <figure class="work-card">
+          <a href="logo-tech.jpg" target="_blank" rel="noopener">
+            <img src="logo-tech.jpg" alt="شعار شركة تقنية" loading="lazy">
+          </a>
+          <figcaption>
+            <h4>تصميم شعار</h4>
+            <p>هوية بصرية بسيطة وسهلة التذكّر تعكس الابتكار والمهنية.</p>
+          </figcaption>
+        </figure>
+
+        <!-- Work 4 -->
+        <figure class="work-card">
+          <a href="BuisnessCard.jpg" target="_blank" rel="noopener">
+            <img src="BuisnessCard.jpg" alt="تصميم بطاقة عمل" loading="lazy">
+          </a>
+          <figcaption>
+            <h4>بطاقة عمل احترافية</h4>
+            <p>بطاقة عصرية بتناسق لوني واضح تعكس هوية العلامة وتترك انطباعًا قويًا.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card align-center">
+      <a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> Start a Project</a>
+      <p class="hint">Click any image to view the full size.</p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 Mohamad Khaled Al-Shlool. All rights reserved.</p>
+  </footer>
+</body>
+</html>
